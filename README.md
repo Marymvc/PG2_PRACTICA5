@@ -124,7 +124,7 @@ python manage.py runserver
 ```
 
 ### Accesos:
-```
+
 Panel de administración: http://localhost:8000/admin/
 ![Vista desde el admin]( Mensaje_no_valido_ADMIN.png)
 ![Vista desde el admin]( Mensaje_valido_ADMIN.png)
@@ -132,4 +132,3 @@ Panel de administración: http://localhost:8000/admin/
 API REST: http://localhost:8000/api/pedidos_cafe/
 ![Vista desde la api]( Mensaje_no_valido_API.png)
 ![Vista desde la api]( Mensaje_valido_API.png)
-```
