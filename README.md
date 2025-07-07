@@ -115,7 +115,7 @@ def clean(self):
     INGREDIENTES_PERMITIDOS = ['canela', 'chocolate',...]
     ingredientes_invalidos = [i for i in self.ingredientes...]
 ```
-##🚀 7. Despliegue
+## 🚀 7. Despliegue
 ```bash
 python manage.py makemigrations
 python manage.py migrate
