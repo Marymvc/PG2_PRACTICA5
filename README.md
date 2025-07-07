@@ -331,7 +331,7 @@ class Logger:
 ```
 ### 12. Validación ingredientes extra en el registro de pedidos
 
-## Validamos la api en pedidos_cafe/serializers.py
+### Validamos la api en pedidos_cafe/serializers.py
 ```bash
      def validate_ingredientes(self, value):
         # Creamos un builder temporal con cualquier base (por ejemplo, "espresso")
@@ -361,7 +361,7 @@ class Logger:
         return value
 
 ```
-## Validamos el administrador en pedidos_cafe/models.py
+### Validamos el administrador en pedidos_cafe/models.py
 ```bash
 
 Agregar antes del modelo
@@ -389,9 +389,7 @@ def clean(self):
             })
 
 ```
-## 13. Configurar el admin en pedidos_cafe/admin.py
-
-* Escribe el siguiente código
+### 13. Configurar el admin en pedidos_cafe/admin.py
 
 ```python
 from django.contrib import admin
