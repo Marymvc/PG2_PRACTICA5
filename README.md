@@ -3,8 +3,6 @@
 
 Este proyecto implementa una API REST para gestionar pedidos de café usando Django y Django REST Framework, aplicando patrones de diseño: **Factory**, **Builder**, **Director** y **Singleton**.
 
-# PRÁCTICA 5 - Sistema de Pedidos de Café con Patrones de Diseño
-
 ## 📋 Tabla de Contenidos
 1. [Configuración del Entorno](#-1-configuración-del-entorno)
 2. [Creación del Proyecto](#-2-creación-del-proyecto)
