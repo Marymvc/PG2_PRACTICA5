@@ -4,6 +4,9 @@ from pedidos_cafe.factory import CafeFactory
 from pedidos_cafe.builder import CafePersonalizadoBuilder
 # Create your models here.
 
+
+INGREDIENTES_PERMITIDOS = ['canela', 'chocolate', 'vainilla', 'azucar', 'leche extra']
+
 class PedidoCafe(models.Model):
     cliente = models.CharField(max_length=100)
     tipo_base = models.CharField(
@@ -25,11 +28,8 @@ class PedidoCafe(models.Model):
     )
     fecha = models.DateTimeField(auto_now_add=True)
 
-
-
-
-def clean(self):
-
+    def clean(self):
+        # Creamos el café base fijo "espresso" como en tu ejemplo original
         cafe = CafeFactory.obtener_base("espresso")
         builder = CafePersonalizadoBuilder(cafe)
 
@@ -45,6 +45,6 @@ def clean(self):
             raise ValidationError({
                 'ingredientes': (
                     f"Ingredientes no válidos: {ingredientes_invalidos}. "
-                    f"Los permitidos son: ['canela', 'chocolate', 'vainilla', 'azucar', 'leche extra']"
+                    f"Los permitidos son: {INGREDIENTES_PERMITIDOS}"
                 )
             })

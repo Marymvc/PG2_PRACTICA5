@@ -51,11 +51,11 @@ class PedidoCafeSerializer(serializers.ModelSerializer):
 
 
     def validate_ingredientes(self, value):
-        # Crear un builder temporal con cualquier base
+        # Creamos un builder temporal con cualquier base (por ejemplo, "espresso")
         cafe_dummy = CafeFactory.obtener_base("espresso")
         builder = CafePersonalizadoBuilder(cafe_dummy)
 
-        # Obtenemos la lista de ingredientes válidos desde el builder
+        # Definimos la lista de ingredientes válidos (y sus precios)
         precios_validos = {
             "canela": 1,
             "chocolate": 2,
@@ -64,6 +64,7 @@ class PedidoCafeSerializer(serializers.ModelSerializer):
             "leche extra": 2,
         }
 
+        # Verificamos si hay ingredientes que no están permitidos
         ingredientes_invalidos = [
             ingrediente for ingrediente in value if ingrediente not in precios_validos
         ]
